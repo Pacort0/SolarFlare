@@ -12,7 +12,7 @@
             </Grid.RowDefinitions>
             <VerticalStackLayout Grid.Row="0" HorizontalOptions="Center">
                     <Image Source="icono_sol.png" MaximumHeightRequest="320" Aspect="AspectFit" Margin="0,0,0,10"/>
-                    <Label Text="SunVilla" FontAttributes="Bold" FontSize="60" HorizontalOptions="Center" 
+                    <Label Text="SolarFlare" FontAttributes="Bold" FontSize="60" HorizontalOptions="Center" 
            FontFamily="Verdana" TextColor="Black" ></Label>
                 </VerticalStackLayout>
             <VerticalStackLayout Spacing="20" Grid.Row="1">

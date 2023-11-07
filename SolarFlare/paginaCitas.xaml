@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SolarFlare.paginaCitas"
+             Title="Citas">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="6*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Border BackgroundColor ="LightGreen" HorizontalOptions="FillAndExpand" Grid.Row="0" Grid.ColumnSpan="2">
+            <Label  Text="CITAS" TextColor="Black" HorizontalOptions="Center" FontSize="42" FontAttributes="Bold"/>
+        </Border>
+        <Border Stroke="black" StrokeThickness="2" Grid.Column="0" Grid.Row="1" Grid.RowSpan="5" BackgroundColor="#F6F0EF">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="2*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Image Source="icono_sol.png" Grid.Row="0"/>
+                <VerticalStackLayout Spacing="20" Padding="2" Grid.Row="1" VerticalOptions="Center">
+                    <Button Text="CITAS" BackgroundColor="LightGray" TextColor="Black" BorderColor="Black" BorderWidth="2" FontAttributes="Bold" FontSize="18"/>
+                    <Button Text="UBICACIÓN" BackgroundColor="LightGray" TextColor="Black" BorderColor="Black" BorderWidth="2" FontAttributes="Bold" FontSize="18"/>
+                    <Button Text="DETALLES" BackgroundColor="LightGray" TextColor="Black" BorderColor="Black" BorderWidth="2" FontAttributes="Bold" FontSize="18"/>
+                </VerticalStackLayout>
+                <Label Text="SolarFlare" TextColor="Black" HorizontalOptions="Center" FontAttributes="Bold" FontSize="30" Grid.Row="2"/>
+                </Grid>
+        </Border>
+    </Grid>
+</ContentPage>
