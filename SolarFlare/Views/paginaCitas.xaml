@@ -16,9 +16,12 @@
         <Border BackgroundColor ="LightGreen" HorizontalOptions="FillAndExpand" Grid.Row="0" Grid.ColumnSpan="3">
             <Label  Text="CITAS" TextColor="Black" HorizontalOptions="Center" FontSize="42" FontAttributes="Bold"/>
         </Border>
-        <Image Source="icono_sol.png" Grid.Row="0" Grid.Column="0"/>
-        <Label Text="SolarFlare" TextColor="Black" HorizontalOptions="Center" FontAttributes="Bold" FontSize="30" Grid.Column="0" Grid.Row="1"/>
-        <ListView x:Name="CitasListView" ItemsSource="{Binding Citas}" Grid.Row="1" Grid.Column="1" HorizontalOptions="FillAndExpand" ItemSelected="CitasListView_ItemSelected">
+        <VerticalStackLayout Grid.Row="1" Grid.Column="0" VerticalOptions="Center">
+            <Image Source="icono_sol.png" />
+            <Label Text="SolarFlare" TextColor="Black" HorizontalOptions="Center" FontAttributes="Bold" FontSize="30"/>
+        </VerticalStackLayout>
+       
+        <ListView x:Name="CitasListView" ItemsSource="{Binding Citas}" Grid.Row="1" Grid.Column="1" HorizontalOptions="FillAndExpand" ItemSelected="CitasListView_ItemSelected" VerticalOptions="Center">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
@@ -26,15 +29,11 @@
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="*"></RowDefinition>
                             </Grid.RowDefinitions>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="0.5*"></ColumnDefinition>
-                                <ColumnDefinition Width="7*"></ColumnDefinition>
-                            </Grid.ColumnDefinitions>
-                            <Border Stroke="Black" StrokeThickness="2" Grid.Column="0">
-                                <Label Text="{Binding Id}" TextColor="Black" HorizontalOptions="Center" VerticalOptions="Center" FontAttributes="Bold" FontSize="20"/>
-                            </Border>
-                            <Border Stroke="Black" StrokeThickness="2" Grid.Column="1">
-                                <Button x:Name="CitaSeleccionada" Text="{Binding Descripcion}" BackgroundColor="White" TextColor="Black" FontSize="30" FontAttributes="Bold" HeightRequest="100"/>
+                            <Border Stroke="Black" StrokeThickness="2">
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="{Binding Id}" TextColor="Black" HorizontalOptions="Center" VerticalOptions="Center" FontAttributes="Bold" FontSize="20"/>
+                                    <Label Text="{Binding Descripcion}" HorizontalOptions="CenterAndExpand" BackgroundColor="White" TextColor="Black" FontSize="30" FontAttributes="Bold" VerticalOptions="Fill"/>
+                                </StackLayout>
                             </Border>
                         </Grid>
                     </ViewCell>

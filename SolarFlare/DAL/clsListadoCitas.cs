@@ -18,7 +18,8 @@ namespace SolarFlare.DAL
                 new clsCita() {Id = 2, Cliente = "Miguel Cabezón", Direccion="Calle Victoria", Telefono=648372943, Descripcion="Revisión de tejado"},
                 new clsCita() {Id = 3, Cliente = "Fernando Galiana", Direccion="Calle Derrota", Telefono=692373928, Descripcion="Instalación de placas de tipo F en finca"},
                 new clsCita() {Id = 4, Cliente = "Pedro Conejo", Direccion="Calle Mariano Urbano", Telefono=688931231, Descripcion="Instalación de placas de tipo C en bloque de pisos"},
-                new clsCita() {Id = 5, Cliente = "Isaac Ramoneti", Direccion="Calle Empate", Telefono=690098472, Descripcion="Reparación de placas tipo C"}
+                new clsCita() {Id = 5, Cliente = "Isaac Ramoneti", Direccion="Calle Empate", Telefono=690098472, Descripcion="Reparación de placas tipo C"},
+                new clsCita() {Id = 6, Cliente = "Isabela Katharina", Direccion="Calle Placas", Telefono=690098472, Descripcion="Reparación de placas tipo C"}
             };
             return listadoCitas;    
         }
