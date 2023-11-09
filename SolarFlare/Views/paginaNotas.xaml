@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SolarFlare.Views.paginaNotas"
+             Title="paginaNotas"
+            BackgroundColor="#F8F4F4" >
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="6*"></RowDefinition>
+            <RowDefinition Height="2*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="6*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Label Text="Anotaciones" FontSize="30" FontAttributes="Bold" Grid.Column="1" Grid.Row="0" HorizontalOptions="Center" Margin="20"/>
+        <Border Grid.Column="1" Grid.Row="1" Stroke="black">
+            <Entry Placeholder="Escriba sus observaciones..." PlaceholderColor="Grey" VerticalOptions="FillAndExpand"
+                BackgroundColor="white" TextColor="black"></Entry>
+        </Border>
+        <HorizontalStackLayout Spacing="25" Grid.Column="1" Grid.Row="2" HorizontalOptions="End">
+            <ImageButton Source="disco_guardar.png" WidthRequest="50"/>
+            <ImageButton Source="trash_can.png" WidthRequest="50"/>
+        </HorizontalStackLayout>
+
+    </Grid>
+
+</ContentPage>

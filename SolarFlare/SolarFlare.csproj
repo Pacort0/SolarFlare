@@ -49,8 +49,11 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="Resources\Images\disco_guardar.png" />
+	  <None Remove="Resources\Images\fondodetalles.jpg" />
 	  <None Remove="Resources\Images\fondoLogin.png" />
 	  <None Remove="Resources\Images\icono_sol.png" />
+	  <None Remove="Resources\Images\trash_can.png" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -71,6 +74,9 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\paginaDetalles.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\paginaNotas.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\paginaTabbed.xaml">

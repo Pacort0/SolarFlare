@@ -14,10 +14,11 @@ public partial class paginaCitas : ContentPage
 	{
 		InitializeComponent();
 		CitasListView.ItemsSource = Citas;
+		lblDia.Text = DateTime.Now.ToString();
 	}
 
     private async void CitasListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
     {
-		await Navigation.PushAsync(new paginaDetalles { BindingContext = e.SelectedItem as clsCita});
+		await Navigation.PushAsync(new paginaTabbed { BindingContext = e.SelectedItem as clsCita});
     }
 }

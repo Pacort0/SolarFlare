@@ -6,14 +6,34 @@
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"></ColumnDefinition>
-            <ColumnDefinition Width="6*"></ColumnDefinition>
+            <ColumnDefinition Width="Auto"></ColumnDefinition>
             <ColumnDefinition Width="*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
-        <VerticalStackLayout Grid.Column="1" HorizontalOptions="Center">
-            <Label Text="{Binding Cliente}"></Label>
-            <Label Text="{Binding Descripcion}"></Label>
-            <Label Text="{Binding Telefono}"></Label>
-            <Label Text="{Binding Direccion}"></Label>
-        </VerticalStackLayout>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Image Source="fondodetalles.jpg" Aspect="AspectFill" Grid.ColumnSpan="3" Grid.RowSpan="3"></Image>
+        <Border Grid.Column="1" Stroke="Black" StrokeThickness="2" Grid.Row="1" Padding="25" BackgroundColor="Black" Opacity="0.7">
+            <VerticalStackLayout  HorizontalOptions="Center" VerticalOptions="Center" >
+                <HorizontalStackLayout Spacing="15">
+                    <Label Text="Nombre del cliente:" FontSize="20" TextColor="White"/>
+                    <Label Text="{Binding Cliente}" FontSize="20" TextColor="White" FontAttributes="Bold"></Label>
+                </HorizontalStackLayout>
+                <HorizontalStackLayout Spacing="15">
+                    <Label Text="Descripción del trabajo:" FontSize="20" TextColor="White"/>
+                    <Label Text="{Binding Descripcion}" FontSize="20" TextColor="White" FontAttributes="Bold" ></Label>
+                </HorizontalStackLayout>
+                <HorizontalStackLayout Spacing="15">
+                    <Label Text="Dirección:" FontSize="20" TextColor="White"/>
+                    <Label Text="{Binding Direccion}" FontSize="20" TextColor="White" FontAttributes="Bold"></Label>
+                </HorizontalStackLayout>
+                <HorizontalStackLayout Spacing="15">
+                    <Label Text="Teléfono del cliente:" TextColor="White" FontSize="20"/>
+                    <Label Text="{Binding Telefono}" FontSize="20" TextColor="White" FontAttributes="Bold"></Label>
+                </HorizontalStackLayout>
+            </VerticalStackLayout>
+        </Border>
     </Grid>
 </ContentPage>
