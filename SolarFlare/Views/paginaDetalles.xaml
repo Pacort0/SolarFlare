@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SolarFlare.Views.paginaDetalles"
+             Title="Detalles">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="6*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <VerticalStackLayout Grid.Column="1" HorizontalOptions="Center">
+            <Label Text="{Binding Cliente}"></Label>
+            <Label Text="{Binding Descripcion}"></Label>
+            <Label Text="{Binding Telefono}"></Label>
+            <Label Text="{Binding Direccion}"></Label>
+        </VerticalStackLayout>
+    </Grid>
+</ContentPage>

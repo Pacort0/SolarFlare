@@ -1,8 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="SolarFlare.MainPage">
-
+             x:Class="SolarFlare.Views.paginaLogin"
+             Title="paginaLogin">
     <Grid>
         <Image Source="fondologin.png" Aspect="AspectFill"></Image>
         <Grid RowSpacing="50">
@@ -11,10 +11,10 @@
                 <RowDefinition Height="*"></RowDefinition>
             </Grid.RowDefinitions>
             <VerticalStackLayout Grid.Row="0" HorizontalOptions="Center">
-                    <Image Source="icono_sol.png" MaximumHeightRequest="320" Aspect="AspectFit" Margin="0,0,0,10"/>
-                    <Label Text="SolarFlare" FontAttributes="Bold" FontSize="60" HorizontalOptions="Center" 
+                <Image Source="icono_sol.png" MaximumHeightRequest="320" Aspect="AspectFit" Margin="0,0,0,10"/>
+                <Label Text="SolarFlare" FontAttributes="Bold" FontSize="60" HorizontalOptions="Center" 
            FontFamily="Verdana" TextColor="Black" ></Label>
-                </VerticalStackLayout>
+            </VerticalStackLayout>
             <VerticalStackLayout Spacing="20" Grid.Row="1">
                 <Entry x:Name="EntryNombre" BackgroundColor="White" TextColor="Black" HorizontalOptions="Center"
            HeightRequest="50" WidthRequest="300" Placeholder="Usuario" PlaceholderColor="Black" Opacity="0.86"/>
@@ -25,5 +25,4 @@
             </VerticalStackLayout>
         </Grid>
     </Grid>
-
 </ContentPage>

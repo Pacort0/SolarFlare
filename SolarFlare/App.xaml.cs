@@ -1,4 +1,6 @@
-﻿namespace SolarFlare
+﻿using SolarFlare.Views;
+
+namespace SolarFlare
 {
     public partial class App : Application
     {
@@ -6,7 +8,7 @@
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new MainPage());
+            MainPage = new NavigationPage(new paginaLogin());
         }
     }
 }

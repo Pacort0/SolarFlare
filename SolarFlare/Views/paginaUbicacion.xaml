@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="SolarFlare.paginaCitas"
-             Title="Citas">
+             x:Class="SolarFlare.Views.paginaUbicacion"
+             Title="Ubicacion">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"></RowDefinition>
@@ -16,7 +16,7 @@
             <ColumnDefinition Width="6*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
         <Border BackgroundColor ="LightGreen" HorizontalOptions="FillAndExpand" Grid.Row="0" Grid.ColumnSpan="2">
-            <Label  Text="CITAS" TextColor="Black" HorizontalOptions="Center" FontSize="42" FontAttributes="Bold"/>
+            <Label  Text="UBICACIÓN" TextColor="Black" HorizontalOptions="Center" FontSize="42" FontAttributes="Bold"/>
         </Border>
         <Border Stroke="black" StrokeThickness="2" Grid.Column="0" Grid.Row="1" Grid.RowSpan="5" BackgroundColor="#F6F0EF">
             <Grid>
@@ -32,7 +32,7 @@
                     <Button Text="DETALLES" BackgroundColor="LightGray" TextColor="Black" BorderColor="Black" BorderWidth="2" FontAttributes="Bold" FontSize="18"/>
                 </VerticalStackLayout>
                 <Label Text="SolarFlare" TextColor="Black" HorizontalOptions="Center" FontAttributes="Bold" FontSize="30" Grid.Row="2"/>
-                </Grid>
+            </Grid>
         </Border>
     </Grid>
 </ContentPage>
