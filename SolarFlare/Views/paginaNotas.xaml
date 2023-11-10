@@ -17,14 +17,21 @@
         </Grid.ColumnDefinitions>
         <Label Text="Anotaciones" FontSize="30" FontAttributes="Bold" Grid.Column="1" Grid.Row="0" HorizontalOptions="Center" Margin="20"/>
         <Border Grid.Column="1" Grid.Row="1" Stroke="black">
-            <Entry Placeholder="Escriba sus observaciones..." PlaceholderColor="Grey" VerticalOptions="FillAndExpand"
+            <Entry x:Name="Anotaciones" Placeholder="Escriba sus observaciones..." PlaceholderColor="Grey" VerticalOptions="FillAndExpand"
                 BackgroundColor="white" TextColor="black"></Entry>
         </Border>
-        <HorizontalStackLayout Spacing="25" Grid.Column="1" Grid.Row="2" HorizontalOptions="End">
-            <ImageButton Source="disco_guardar.png" WidthRequest="50"/>
-            <ImageButton Source="trash_can.png" WidthRequest="50"/>
-        </HorizontalStackLayout>
-
+        <Grid Grid.Column="1" Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <HorizontalStackLayout Spacing="25" Grid.Column="0">
+                <ImageButton x:Name="btnGuardar" Source="disco_guardar.png" WidthRequest="50" Clicked="btnGuardar_Clicked"/>
+                <ImageButton x:Name="btnBorrar" Source="trash_can.png" WidthRequest="50" Clicked="btnBorrar_Clicked"/>
+            </HorizontalStackLayout>
+            <Label x:Name="Estado" FontAttributes="Bold" FontSize="30" Grid.Column="1" Grid.ColumnSpan="2" HorizontalOptions="Center" Margin="15"/>
+        </Grid>
     </Grid>
 
 </ContentPage>

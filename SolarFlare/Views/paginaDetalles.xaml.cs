@@ -9,4 +9,8 @@ public partial class paginaDetalles : ContentPage
 		InitializeComponent();
 	}
 
+	private async void btnAddFoto_Clicked(object sender, EventArgs e)
+	{
+		FileResult photo = await MediaPicker.Default.CapturePhotoAsync();
+	}
 }

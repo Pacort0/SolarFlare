@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SolarFlare.Views.paginaCitas"
              Title="Citas"
-             BackgroundColor="#F8F4F4">
+             BackgroundImageSource="fondodetalles.jpg">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"></RowDefinition>
@@ -19,13 +19,10 @@
         <Border BackgroundColor ="LightGreen" HorizontalOptions="FillAndExpand" Grid.Row="0" Grid.ColumnSpan="3">
             <Label  Text="CITAS" TextColor="Black" HorizontalOptions="Center" FontSize="42" FontAttributes="Bold"/>
         </Border>
-        <VerticalStackLayout Grid.Row="2" Grid.Column="0">
-            <Image Source="icono_sol.png" />
-            <Label Text="SolarFlare" TextColor="Black" HorizontalOptions="Center" FontAttributes="Bold" FontSize="30"/>
-        </VerticalStackLayout>
-        <Label x:Name="lblDia" Grid.ColumnSpan="3" Grid.Row="1" VerticalOptions="Center" FontSize="30" FontAttributes="Bold" HorizontalOptions="Center"></Label>
+        <Label x:Name="lblDia" Grid.ColumnSpan="3" Grid.Row="1" VerticalOptions="Center" FontSize="35" FontAttributes="Bold" HorizontalOptions="Center"></Label>
         <ScrollView Grid.Row="2" Grid.Column="1">
-            <ListView x:Name="CitasListView" ItemsSource="{Binding Citas}"  HorizontalOptions="FillAndExpand" ItemSelected="CitasListView_ItemSelected" VerticalOptions="Center">
+            <ListView x:Name="CitasListView" ItemsSource="{Binding Citas}"  HorizontalOptions="FillAndExpand"
+                      ItemSelected="CitasListView_ItemSelected" VerticalOptions="Center" Opacity="0.9">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>

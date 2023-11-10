@@ -14,15 +14,17 @@ namespace SolarFlare.Entities
         string direccion;
         string descripcion;
         long telefono;
+        string sitio;
         #endregion
 
         #region constructores
-        public clsCita(int id, string cliente, string direccion, string descripcion, long telefono) { 
+        public clsCita(int id, string cliente, string direccion, string descripcion, long telefono, string sitio) { 
             this.id = id;
             this.cliente = cliente;
             this.direccion = direccion;
             this.descripcion = descripcion;
             this.telefono = telefono;
+            this.sitio = sitio;
         }
         public clsCita() {
             this.id = -1;
@@ -30,6 +32,7 @@ namespace SolarFlare.Entities
             this.direccion = "";
             this.telefono = 0;
             this.descripcion = "";
+            this.sitio = "";
         }
         #endregion
 
@@ -60,6 +63,11 @@ namespace SolarFlare.Entities
         {
             get { return telefono; }
             set { telefono = value; }
+        }
+        public string Sitio
+        {
+            get { return sitio; }
+            set { sitio = value; }
         }
         #endregion
     }
