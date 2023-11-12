@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,6 +16,7 @@ namespace SolarFlare.Entities
         string descripcion;
         long telefono;
         string sitio;
+
         #endregion
 
         #region constructores
@@ -69,6 +71,7 @@ namespace SolarFlare.Entities
             get { return sitio; }
             set { sitio = value; }
         }
+
         #endregion
     }
 }

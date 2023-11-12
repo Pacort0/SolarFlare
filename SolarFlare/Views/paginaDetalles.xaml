@@ -3,8 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SolarFlare.Views.paginaDetalles"
              Title="Detalles"
-             BackgroundImageSource="fondodetalles.jpg" >
-    <Grid>
+             BackgroundImageSource="fondodetalles.jpg">
+    <Grid ColumnSpacing="10" RowSpacing="10" Margin="5">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"></ColumnDefinition>
             <ColumnDefinition Width="*"></ColumnDefinition>
@@ -19,6 +19,12 @@
             <RowDefinition Height="2*"></RowDefinition>
             <RowDefinition Height="*"></RowDefinition>
         </Grid.RowDefinitions>
+        <Label Grid.Row="0" Grid.ColumnSpan="5" Text="CITAS" TextColor="Black" HorizontalOptions="Center" FontSize="42" FontAttributes="Bold"/>
+        <HorizontalStackLayout Grid.Row="0" Grid.Column="3" Grid.ColumnSpan="2" HorizontalOptions="Center" VerticalOptions="Center" Spacing="10">
+            <Label Text="Tarea realizada" FontSize="36" FontAttributes="Bold"/>
+            <CheckBox></CheckBox>
+        </HorizontalStackLayout>
+        
         <BoxView Grid.Row="1" Grid.ColumnSpan="3" Grid.Column="1" Opacity="0.7" Color="Black"></BoxView>
         <VerticalStackLayout  HorizontalOptions="Center" VerticalOptions="Center" Grid.Row="1" Grid.ColumnSpan="3" Grid.Column="1" >
             <HorizontalStackLayout Spacing="15">
@@ -45,7 +51,10 @@
         <BoxView Grid.Column="1" Grid.Row="3" Opacity="0.8"></BoxView>
         <VerticalStackLayout Grid.Column="1" Grid.Row="3" HorizontalOptions="Center">
             <Label Text="Añadir foto" TextColor="White" FontSize="30" FontAttributes="Bold"/>
-            <ImageButton x:Name="btnAddFoto" Clicked="btnAddFoto_Clicked" Source="add_icon.png" WidthRequest="150" HeightRequest="150"/>
+            <ImageButton x:Name="btnAddFoto" Clicked="btnAddFoto_Clicked" Source="add_icon.png" WidthRequest="140" HeightRequest="140"/>
         </VerticalStackLayout>
+        <Button x:Name="btnEnviar" Text="Enviar datos" FontSize="30" Grid.Column="3" Grid.Row="3" CornerRadius="50" HeightRequest="100" Clicked="btnEnviar_Clicked"></Button>
+        <BoxView  Grid.Column="1" Grid.Row="4" Grid.ColumnSpan="3" Opacity="0.8"></BoxView>
+        <Label x:Name="lblEnvio" Grid.Column="1" Grid.Row="4" Grid.ColumnSpan="3" HorizontalOptions="Center" FontSize="40" FontAttributes="Bold"/>
     </Grid>
 </ContentPage> 

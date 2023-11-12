@@ -64,9 +64,6 @@
 	  <Compile Update="Views\paginaCitas.xaml.cs">
 	    <DependentUpon>paginaCitas.xaml</DependentUpon>
 	  </Compile>
-	  <Compile Update="Views\paginaUbicacion.xaml.cs">
-	    <DependentUpon>paginaUbicacion.xaml</DependentUpon>
-	  </Compile>
 	</ItemGroup>
 
 	<ItemGroup>
@@ -80,9 +77,6 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\paginaTabbed.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
-	  <MauiXaml Update="Views\paginaUbicacion.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\paginaLogin.xaml">

@@ -13,4 +13,9 @@ public partial class paginaDetalles : ContentPage
 	{
 		FileResult photo = await MediaPicker.Default.CapturePhotoAsync();
 	}
+
+    private void btnEnviar_Clicked(object sender, EventArgs e)
+    {
+		lblEnvio.Text = "Datos guardados correctamente";
+    }
 }
